@@ -9,10 +9,10 @@ start_rasdaman.sh:   starting rasmgr... ok, pid 23.
 start_rasdaman.sh:   starting all rasdaman servers... ok.
 start_rasdaman.sh: done.
 # rasql -q 'select {1+1, 1-1}' --out string
-rasql: rasdaman query tool v1.0, rasdaman 9.8.0.
-Opening database RASBASE at localhost:7001... ok.
-Executing retrieval query... ok.
-Query result collection has 1 element(s):
+...
   Result element 1: { 2, 0 }
-rasql done.
+# rasql -q 'select encode((marray x in [0:1, -1:1] values 1), "JSO
+N")' --out string
+...
+  Result object 1: [[1,1,1],[1,1,1]]
 ```
