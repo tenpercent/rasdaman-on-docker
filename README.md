@@ -1,7 +1,7 @@
 # rasdaman-on-docker
 The purpose of this repository is to set up a docker image where RasDaMan database can be run and sample queries can be issued.
 ```
-$ docker run -ti tenpercent/docker
+$ docker run -ti tenpercent/rasdaman
 # start_rasdaman.sh 
 start_rasdaman.sh: starting rasdaman server complex...
 /opt/rasdaman/bin/start_rasdaman.sh: line 196: cd: /opt/rasdaman/log/: No such file or directory
