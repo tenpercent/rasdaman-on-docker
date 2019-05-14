@@ -14,4 +14,7 @@ start_rasdaman.sh: done.
 # rasql -q 'select encode((marray x in [0:1, -1:1] values 1), "JSON")' --out string
 ...
   Result object 1: [[1,1,1],[1,1,1]]
+# rasql -q 'select encode((marray x in [0:2, 0:2] values x[1]+x[0]), "JSON")' --out string
+...
+  Result object 1: [[0,1,2],[1,2,3],[2,3,4]]  
 ```
