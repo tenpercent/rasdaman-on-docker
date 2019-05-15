@@ -4,4 +4,8 @@ RUN set -ex; \
  yum install -y epel-release; \
  yum install --setopt=obsoletes=0 -y rasdaman
 ENV PATH="/opt/rasdaman/bin:${PATH}"
-RUN create_db.sh
+RUN set -ex; \
+ useradd rasdaman; \
+ mkdir -p /opt/rasdaman/log; \
+ chown -R rasdaman /opt/rasdaman; \
+ chgrp -R rasdaman /opt/rasdaman
