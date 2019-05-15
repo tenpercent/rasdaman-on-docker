@@ -9,4 +9,4 @@ RUN set -ex; \
  mkdir -p /opt/rasdaman/log; \
  chown -R rasdaman /opt/rasdaman; \
  chgrp -R rasdaman /opt/rasdaman; \
- alias q='rasql --user rasadmin --passwd rasadmin --out string -q'
+ echo "alias q='rasql --user rasadmin --passwd rasadmin --out string -q'" >> .bashrc
